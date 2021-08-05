@@ -1,0 +1,15 @@
+env:
+  browser: false
+  node: true
+extends:
+  - standard
+rules:
+  semi:
+    - error
+    - always
+  indent:
+    - error
+    - 2
+  quotes:
+    - error
+    - double
