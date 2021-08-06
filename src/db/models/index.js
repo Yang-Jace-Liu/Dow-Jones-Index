@@ -1,4 +1,4 @@
-const Record = require("./dow");
+const Record = require("./record");
 
 module.exports = {
   Record

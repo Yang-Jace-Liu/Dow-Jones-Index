@@ -9,9 +9,13 @@ const assert = require("assert");
 
 const generateDollarSetter = (fieldName) => {
   return function (val) {
-    assert(val[0] === "$");
-    const result = parseFloat(val.slice(1));
-    this.setDataValue(fieldName, result);
+    if (typeof (val) === "string") {
+      assert(val[0] === "$");
+      const result = parseFloat(val.slice(1));
+      this.setDataValue(fieldName, result);
+    } else {
+      this.setDataValue(fieldName, val);
+    }
   };
 };
 
