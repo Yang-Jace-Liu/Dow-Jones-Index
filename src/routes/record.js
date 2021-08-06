@@ -13,6 +13,7 @@ router.post("/", checkSchema(recordSchema), validateRequest, async (req, res, ne
       data: record
     });
   } catch (err) {
+    console.error(err);
     res.status(500).send({
       errors: ["Internal Server Error"]
     });

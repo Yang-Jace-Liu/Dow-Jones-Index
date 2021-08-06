@@ -20,13 +20,25 @@ router.get("/", [query("stock").isString().withMessage("stock is required.")], a
   });
   res.status(200).send({
     data: records
-  })
+  });
 });
 
 router.post("/", checkSchema(recordsSchema), validateRequest, async (req, res, next) => {
   // TODO: authentication
   // TODO: Check replication
-  res.sendStatus(200);
+
+  try {
+    const { data } = req.body;
+    const respData = await Record.bulkCreate(data);
+    res.status(200).send({
+      data: respData
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({
+      errors: ["Internal Server Error"]
+    });
+  }
 });
 
 module.exports = exports = router;
