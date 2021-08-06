@@ -1,4 +1,4 @@
-const Schema = {
+const schema = {
   quarter: {
     isInt: {
       options: {
@@ -10,7 +10,8 @@ const Schema = {
     errorMessage: "quarter has to be an integer between 1 and 4."
   },
   stock: {
-    notEmpty: true
+    notEmpty: true,
+    errorMessage: "stock cannot be empty."
   },
   date: {
     notEmpty: true,
@@ -96,4 +97,4 @@ const Schema = {
   }
 };
 
-module.exports = exports = Schema;
+module.exports = exports = schema;

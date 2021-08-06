@@ -15,3 +15,15 @@ npm run init <data file path>
 ```bash
 npm start
 ```
+
+# Todos
+
+- [ ] Unit tests and integration tests
+- [ ] Authentication
+- [ ] Replicates Checking
+- [ ] OpenAPI documents
+- [ ] Better Input Validation
+- [ ] Universal Error Handling
+- [ ] Universal Data Format
+- [ ] Input Sanitizing
+- [ ] Different levels of logging

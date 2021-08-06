@@ -2,9 +2,9 @@ const { Record } = require("../db/models");
 const validateRequest = require("../middlewares/validate-request");
 const router = require("express").Router();
 const { checkSchema } = require("express-validator");
-const { RecordSchema } = require("../validators");
+const { recordSchema } = require("../validators");
 
-router.post("/", checkSchema(RecordSchema), validateRequest, async (req, res, next) => {
+router.post("/", checkSchema(recordSchema), validateRequest, async (req, res, next) => {
   // TODO: authentication
   // TODO: Check replication
   try {

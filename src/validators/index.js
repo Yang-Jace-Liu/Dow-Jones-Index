@@ -1,3 +1,4 @@
 module.exports = {
-  RecordSchema: require("./record")
+  recordSchema: require("./record"),
+  recordsSchema: require("./records")
 };

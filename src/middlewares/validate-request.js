@@ -5,7 +5,7 @@ const validateRequest = (req, res, next) => {
 
   if (!errors.isEmpty()) {
     res.status(400).send({
-      errors: [errors.array()]
+      errors: errors.array()
     });
   } else {
     next();
