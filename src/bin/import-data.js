@@ -30,6 +30,7 @@ const csvContent = fs.readFileSync(csvSourcePath, { encoding: "utf8", flag: "r" 
     console.log("Seeding data into database");
     await Record.bulkCreate(parsedObjects);
     console.log(`Successfully inserted ${parsedObjects.length} records.`);
+    await db.close();
   } catch (error) {
     console.log(error);
   }

@@ -16,7 +16,7 @@ const schema = {
   date: {
     notEmpty: true,
     matches: {
-      options: /\d{4}-\d{2}-\d{2}/, // TODO: Need more precise pattern
+      options: /^\d{4}-\d{2}-\d{2}$/, // TODO: Need more precise pattern
       errorMessage: "date should follow the pattern yyyy-mm-dd."
     }
   },

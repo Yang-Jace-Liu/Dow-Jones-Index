@@ -6,7 +6,8 @@
   "scripts": {
     "init": "node src/bin/import-data.js",
     "start": "node src/bin/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --setupFiles dotenv/config --runInBand",
+    "pretest": "node src/bin/import-data.js tests/dow_jones_index.data"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,16 @@
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3"
+    "eslint-config-standard": "^16.0.3",
+    "jest": "^27.0.6",
+    "supertest": "^6.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
