@@ -17,12 +17,18 @@ DATABASE_URL="postgres://postgres:postgres@localhost:5432/DowJonesIndex"
 npm run init <data file path>
 ```
 
- ## To start the application
+## To start the application
 
 By default, the application open `http://127.0.0.1:5000` for listening.
  
 ```bash
 npm start
+```
+
+## To run tests
+
+```bash
+npm test
 ```
 
 # API Routes
